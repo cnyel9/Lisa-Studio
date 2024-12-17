@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa Studio - Layanan Jasa Photographer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        .swiper {
+            width: 100%;
+            height: 500px;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide-content {
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans pt-16">
+    <!-- Navigasi -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
+            <div class="flex items-center">
+                <img src="/img/logo.png" alt="Logo" class="h-10 w-10 mr-3 rounded-full">
+                <span class="text-2xl font-bold text-gray-800">Lisa Studio</span>
+            </div>
+            
+            <!-- Tombol Mobile Menu -->
+            <div class="md:hidden">
+                <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Menu Navigasi Desktop -->
+            <div id="desktop-menu" class="hidden md:flex md:items-center md:w-auto w-full">
+                <ul class="md:flex md:space-x-6 items-center">
+                    <li><a href="#home" class="text-gray-700 hover:text-blue-600 transition block py-2 md:py-0">Beranda</a></li>
+                    <li><a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition block py-2 md:py-0">Layanan</a></li>
+                    <li><a href="#kontak" class="text-gray-700 hover:text-blue-600 transition block py-2 md:py-0">Tentang</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="fixed w-full bg-white shadow-md hidden z-40 top-16 transition-all duration-300 ease-in-out">
+        <div class="container mx-auto px-4 py-4">
+            <ul class="space-y-4">
+                <li><a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Beranda</a></li>
+                <li><a href="#portfolio" class="block py-2 text-gray-700 hover:text-blue-600">Layanan</a></li>
+                <li><a href="#kontak" class="block py-2 text-gray-700 hover:text-blue-600">Tentang</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Swiper Slider -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32')">
+                <div class="swiper-slide-content">
+                    <h2 class="text-4xl font-bold mb-4">Selamat Datang di Lisa Studio</h2>
+                    <p class="text-xl">Mengabadikan Momen Terindah Anda</p>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1519638399535-1b036603ac77')">
+                <div class="swiper-slide-content">
+                    <h2 class="text-4xl font-bold mb-4">Profesional & Kreatif</h2>
+                    <p class="text-xl">Kami Menghadirkan Kualitas Terbaik</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- Layanan Section -->
+<section id="portfolio" class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Layanan Kami</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden relative group">
+            <img src="/img/wedding.jpg" alt="Portfolio 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+            <div class="p-4">
+                <h3 class="font-semibold">Foto Wedding | Rp. 350.000</h3>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100">
+                <a href="https://api.whatsapp.com/send?phone=6282186018625&text=*Halo*,%20*Lisa*%20*Studio*%20!%20Perkenalkan,%20Nama%20saya:%20Alamat:%20Email:%20%20Mohon%20informasi%20mengenai%20paket%20*Foto%20Wedding*:%20%20" target="_blank" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 transform scale-75 group-hover:scale-100">
+                    Pesan Sekarang
+                </a>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden relative group">
+            <img src="https://osingstudio.com/wp-content/uploads/2024/03/jasa-fotografer-travel-photography-jasa-foto-perjalanan-wisata-osing-studio.jpg" alt="Portfolio 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+            <div class="p-4">
+                <h3 class="font-semibold">Foto Traveling | Rp. 500.000</h3>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100">
+                <a href="https://api.whatsapp.com/send?phone=6282186018625&text=*Halo*,%20*Lisa*%20*Studio*%20!%20Perkenalkan,%20Nama%20saya:%20Alamat:%20Email:%20%20Mohon%20informasi%20mengenai%20paket%20*Foto%20Traveling*:%20%20" target="_blank" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 transform scale-75 group-hover:scale-100">
+                    Pesan Sekarang
+                </a>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden relative group">
+            <img src="/img/event 2.JPG" alt="Portfolio 3" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+            <div class="p-4">
+                <h3 class="font-semibold">Foto Event | Rp. 500.000</h3>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-all duration-300 opacity-0 group-hover:opacity-100">
+                <a href="https://api.whatsapp.com/send?phone=6282186018625&text=*Halo*,%20*Lisa*%20*Studio*%20!%20Perkenalkan,%20Nama%20saya:%20Alamat:%20Email:%20%20Mohon%20informasi%20mengenai%20paket%20*Foto%20Event*:%20%20" target="_blank" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 transform scale-75 group-hover:scale-100">
+                    Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Deskripsi Section -->
+<section class="container mx-auto px-4 py-8 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-justify">
+        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Tentang Lisa Studio</h3>
+        <p class="text-gray-600 leading-relaxed mb-4">
+            Selamat datang di website lisastudio.vercel.com, situs resmi dari Lisa Studio. Lisa Studio merupakan usaha yang bergerak dalam bidang jasa fotografi, videografi, dan olah digital. Lisa Studio menawarkan jasa fotografi dan videografi profesional untuk dokumentasi berbagai perayaan.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4">
+            Berikut berbagai paket yang dapat Anda pilih bersama Lisa Studio. Paket; foto event, foto prewedding & wedding, pembuatan dokumentasi Buku Akhir Tahun (BTS), graduation photo, foto ulang tahun, foto perjalanan wisata, foto momen lamaran, baby shower photo, bridal shower photo, hingga foto sebuah produk.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4">
+            Lisa Studio merupakan divisi usaha yang berada di bawah naungan CV. Hendri M, sebuah perusahaan yang bergerak dalam bidang jasa fotografi, videografi, serta digital editing di Kabupaten Lampung. Kami melayani pemotretan di wilayah Lampung dan kota/kabupaten di sekitarnya.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-6">
+            Lisa Studio memiliki tim berpengalaman dan terpercaya. Pastikan momen berharga Anda tak terlewatkan begitu saja bersama Osing Studio. Segera hubungi kami untuk reservasi.
+        </p>
+        <div class="flex justify-center space-x-4">
+            <a href="https://api.whatsapp.com/send?phone=6282186018625&text=*Halo*,%20*Lisa*%20*Studio*%20!%20Perkenalkan,%20Nama%20saya:%20Alamat:%20Email:%20%20Mohon%20informasi%20mengenai%20paket%20*Foto%20Traveling*:%20%20" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+                Hubungi Kami
+            </a>
+            <a href="#layanan" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-600 hover:text-white transition">
+                Lihat Layanan
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Inisialisasi Swiper -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+            effect: 'creative',
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ['-20%', 0, -1],
+                },
+                next: {
+                    translate: ['100%', 0, 0],
+                },
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const desktopMenu = document.getElementById('desktop-menu');
+
+        // Toggle Mobile Menu
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Responsive Menu Management
+        function handleResponsiveMenu() {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+                desktopMenu.classList.remove('hidden');
+            } else {
+                desktopMenu.classList.add('hidden');
+            }
+        }
+
+        // Initial check and event listener for window resize
+        handleResponsiveMenu();
+        window.addEventListener('resize', handleResponsiveMenu);
+    </script>
+</body>
+</html>
